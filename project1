@@ -22,3 +22,8 @@ class BankAccount(object):
   def withdraw(self, amount):
     if amount > balance:
       print "Withdrawal greater than the balance."
+      return self.balance
+    else:
+      print "Withdrawal: $%.2f" % (self.amount)
+      self.balance -= amount
+      self.show_balance()
